@@ -3,10 +3,13 @@ view: repeat_purchase_facts {
     sql: SELECT
         orders.order_id
         , COUNT(DISTINCT orders.order_id) AS number_subsequent_orders
-        , MIN(orders.order_created_date) AS next_order_date
-        , MIN(orders.order_id) AS next_order_id
+        , MIN(repeat_orders.order_created_date) AS next_order_date
+        , MIN(repeat_orders.order_id) AS next_order_id
       FROM ${orders.SQL_TABLE_NAME}
-      GROUP BY orders.order_id
+      LEFT JOIN orders repeat_orders
+      ON orders.user_id = repeat_orders.user_id
+      AND orders.order_created_date < repeat_orders.order_created_date
+      GROUP BY 1
        ;;
   }
 
@@ -25,7 +28,7 @@ view: repeat_purchase_facts {
 
   dimension: has_subsequent_order {
     type: yesno
-    sql: ${number_subsequent_orders}_id} > 0 ;;
+    sql: ${next_order_id} > 0 ;;
   }
 
   dimension: number_subsequent_orders {
