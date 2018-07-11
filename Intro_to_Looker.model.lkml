@@ -1,7 +1,6 @@
 connection: "thelook_events"
 
 include: "*.view.lkml"         # include all views in this project
-include: "*.dashboard.lookml"  # include all dashboards in this project
 
 explore: orders {
   join: order_facts {
@@ -15,7 +14,6 @@ explore: orders {
    type: full_outer
     sql_on: ${orders.order_id} = ${repeat_purchase_facts.order_id} ;;
       }
+ }
 
-
-
-  }
+explore: inventory {}
