@@ -1,4 +1,4 @@
-view: inventory {
+view: inventory_items {
   derived_table: {
     sql:
       SELECT

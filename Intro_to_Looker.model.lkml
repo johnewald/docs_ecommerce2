@@ -16,4 +16,4 @@ explore: orders {
       }
  }
 
-explore: inventory {}
+explore: inventory_items {}
