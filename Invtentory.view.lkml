@@ -83,9 +83,23 @@ view: inventory {
   }
 
   dimension: type {
+    link: {
+      label: "Shirts to Purchase"
+      url: "https://www.kohls.com/product/prd-3071608/toddler-boy-jumping-beans-pique-polo.jsp?color=Navy&prdPV=5 "
+    }
+    link: {
+      label: "Pants to Purchase"
+      url: "https://www.kohls.com/product/prd-3267211/toddler-boy-jumping-beans-twill-jogger-pants.jsp?color=Red&prdPV=3"
+    }
+    link: {
+      label: "Shoes to Purchase"
+      url: "https://www.kohls.com/product/prd-540760/converse-all-star-sneakers-for-toddlers.jsp?color=Black&prdPV=1"
+    }
     type: string
     sql: ${TABLE}.type ;;
-  }
+
+
+     }
 
   dimension: color_ {
     type: string
