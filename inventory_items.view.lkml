@@ -2,82 +2,82 @@ view: inventory_items {
   derived_table: {
     sql:
       SELECT
-      'Shoes' AS type, 'black' AS color_, 99.99 AS retail_price
+      'Pants' AS type, 'red' AS color, 69.99 AS retail_price
       UNION ALL
       SELECT
-      'Shoes' AS type, 'black' AS color_, 99.99 AS retail_price
+      'Pants' AS type, 'black' AS color, 59.99 AS retail_price
       UNION ALL
       SELECT
-      'Pants' AS type, 'red' AS color_, 69.99 AS retail_price
+      'Pants' AS type, 'blue' AS color, 59.99 AS retail_price
       UNION ALL
       SELECT
-      'Shoes' AS type, 'white' AS color_, 69.99 AS retail_price
+      'Pants' AS type, 'red' AS color, 59.99 AS retail_price
       UNION ALL
       SELECT
-      'Pants' AS type, 'black' AS color_, 59.99 AS retail_price
+      'Pants' AS type, 'blue' AS color, 49.99 AS retail_price
       UNION ALL
       SELECT
-      'Pants' AS type, 'blue' AS color_, 59.99 AS retail_price
+      'Pants' AS type, 'blue' AS color, 49.99 AS retail_price
       UNION ALL
       SELECT
-      'Pants' AS type, 'red' AS color_, 59.99 AS retail_price
+      'Shirts' AS type, 'black' AS color, 24.99 AS retail_price
       UNION ALL
       SELECT
-      'Pants' AS type, 'white' AS color_, 59.99 AS retail_price
+      'Shirts' AS type, 'black' AS color, 14.99 AS retail_price
       UNION ALL
       SELECT
-      'Pants' AS type, 'white' AS color_, 59.99 AS retail_price
+      'Shirts' AS type, 'black' AS color, 19.99 AS retail_price
       UNION ALL
       SELECT
-      'Shoes' AS type, 'black' AS color_, 49.99 AS retail_price
+      'Shirts' AS type, 'red' AS color, 49.99 AS retail_price
       UNION ALL
       SELECT
-      'Pants' AS type, 'blue' AS color_, 49.99 AS retail_price
+      'Shirts' AS type, 'white' AS color, 39.99 AS retail_price
       UNION ALL
       SELECT
-      'Pants' AS type, 'blue' AS color_, 49.99 AS retail_price
+      'Shirts' AS type, 'blue' AS color, 29.99 AS retail_price
       UNION ALL
       SELECT
-      'Shoes' AS type, 'red' AS color_, 49.99 AS retail_price
+      'Shirts' AS type, 'red' AS color, 29.99 AS retail_price
       UNION ALL
       SELECT
-      'Shirts' AS type, 'red' AS color_, 49.99 AS retail_price
+      'Shirts' AS type, 'red' AS color, 29.99 AS retail_price
       UNION ALL
       SELECT
-      'Shirts' AS type, 'white' AS color_, 39.99 AS retail_price
+      'Shirts' AS type, 'blue' AS color, 19.99 AS retail_price
       UNION ALL
       SELECT
-      'Shirts' AS type, 'blue' AS color_, 29.99 AS retail_price
+      'Shirts' AS type, 'blue' AS color, 19.99 AS retail_price
       UNION ALL
       SELECT
-      'Shirts' AS type, 'red' AS color_, 29.99 AS retail_price
+      'Shirts' AS type, 'blue' AS color, 19.99 AS retail_price
       UNION ALL
       SELECT
-      'Shirts' AS type, 'red' AS color_, 29.99 AS retail_price
+      'Shirts' AS type, 'white' AS color, 19.99 AS retail_price
       UNION ALL
       SELECT
-      'Pants' AS type, 'white' AS color_, 29.99 AS retail_price
+      'Shirts' AS type, 'white' AS color, 9.99 AS retail_price
       UNION ALL
       SELECT
-      'Shirts' AS type, 'blue' AS color_, 19.99 AS retail_price
+      'Shoes' AS type, 'black' AS color, 99.99 AS retail_price
       UNION ALL
       SELECT
-      'Shirts' AS type, 'blue' AS color_, 19.99 AS retail_price
+      'Shoes' AS type, 'black' AS color, 99.99 AS retail_price
       UNION ALL
       SELECT
-      'Shirts' AS type, 'blue' AS color_, 19.99 AS retail_price
+      'Shoes' AS type, 'white' AS color, 69.99 AS retail_price
       UNION ALL
       SELECT
-      'Shirts' AS type, 'white' AS color_, 19.99 AS retail_price
+      'Shoes' AS type, 'black' AS color, 49.99 AS retail_price
       UNION ALL
       SELECT
-      'Shirts' AS type, 'white' AS color_, 9.99 AS retail_price
+      'Shoes' AS type, 'blue' AS color, 49.99 AS retail_price
       UNION ALL
       SELECT
-      'Shoes' AS type, 'blue' AS color_, 49.99 AS retail_price
+      'Shoes' AS type, 'blue' AS color, 79.99 AS retail_price
       UNION ALL
       SELECT
-      'Shoes' AS type, 'blue' AS color_, 79.99 AS retail_price
+      'Shoes' AS type, 'red' AS color, 49.99 AS retail_price
 
       ;;
   }
@@ -101,9 +101,9 @@ view: inventory_items {
 
      }
 
-  dimension: color_ {
+  dimension: color {
     type: string
-    sql: ${TABLE}.color_ ;;
+    sql: ${TABLE}.color ;;
   }
 
   dimension: retail_price {
