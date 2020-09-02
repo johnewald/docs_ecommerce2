@@ -4,7 +4,7 @@ include: "*.view.lkml"         # include all views in this project
 
 explore: orders {
   join: order_facts {
-    view_label: "Orders and more"
+    view_label: "all order info"
     relationship: many_to_one
     sql_on: ${order_facts.order_id} = ${orders.order_id} ;;
   }
